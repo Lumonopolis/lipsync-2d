@@ -28,7 +28,7 @@ Open **[lumonopolis.github.io/lipsync-2d](https://lumonopolis.github.io/lipsync-
 The CLI auto-downloads and caches the FP16 ONNX weights from Hugging Face on first run (or pass `--model local.onnx` to run completely offline):
 
 ```bash
-pip install -e ".[onnx]"
+pip install "lipsync-2d[onnx]"
 
 # Drop-in Rhubarb JSON / TSV / XML
 lipsync-2d voice.wav -f json -o cues.json
@@ -42,6 +42,10 @@ lipsync-2d voice.wav -f blender -o animate_mouth.py
 ```
 
 ### 3. TypeScript / Browser API
+
+```bash
+npm install lipsync-2d-web
+```
 
 ```ts
 import { LipSyncEngine, toRhubarbJson, toGodotTres } from "lipsync-2d-web";
