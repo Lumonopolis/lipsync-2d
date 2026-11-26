@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://lumonopolis.github.io/lipsync-2d/sitemap.xml

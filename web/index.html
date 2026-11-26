@@ -3,10 +3,84 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>LipSync 2D Studio</title>
+    <title>lipsync-2d — Real-Time Multilingual 2D Lip-Sync &amp; Visemes (ONNX / WASM)</title>
+    <meta
+      name="description"
+      content="6.5 MB Apache-2.0 multilingual ONNX model for real-time 2D lip-sync across 7 languages (EN, ES, FR, DE, ZH, KO, JA). Drop-in Rhubarb JSON/TSV/XML, Live2D, Godot 4 .tres, and Blender 5 exports."
+    />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://lumonopolis.github.io/lipsync-2d/" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="lipsync-2d" />
+    <meta property="og:title" content="lipsync-2d — Real-Time Multilingual 2D Lip-Sync &amp; Visemes (6.5 MB ONNX)" />
+    <meta
+      property="og:description"
+      content="Open-source Apache-2.0 multilingual alternative to Rhubarb Lip Sync: 7 languages, works on high-pitched/female voices, streams in browser WASM at ~1.5 ms/frame, exports Rhubarb, Live2D, Godot 4, and Blender 5."
+    />
+    <meta property="og:url" content="https://lumonopolis.github.io/lipsync-2d/" />
+    <meta property="og:image" content="https://lumonopolis.github.io/lipsync-2d/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="lipsync-2d Browser Studio animating a 2D character rig on Japanese speech with Rhubarb mouth cues and 15 Oculus viseme bars" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="lipsync-2d — 6.5 MB Multilingual 2D Lip-Sync (Browser, Godot, Blender, Live2D)" />
+    <meta
+      name="twitter:description"
+      content="Apache-2.0 causal ONNX model across 7 languages (EN/ES/FR/DE/ZH/KO/JA), ~1.5 ms/frame in WASM, drop-in Rhubarb/Godot 4/Blender 5/Live2D exports."
+    />
+    <meta name="twitter:image" content="https://lumonopolis.github.io/lipsync-2d/og-image.png" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": ["SoftwareApplication", "WebApplication"],
+        "name": "lipsync-2d",
+        "softwareVersion": "0.1.0",
+        "applicationCategory": "MultimediaApplication",
+        "operatingSystem": "Any (Web Browser, macOS, Linux, Windows)",
+        "isAccessibleForFree": true,
+        "license": "https://www.apache.org/licenses/LICENSE-2.0",
+        "url": "https://lumonopolis.github.io/lipsync-2d/",
+        "codeRepository": "https://github.com/Lumonopolis/lipsync-2d",
+        "image": "https://lumonopolis.github.io/lipsync-2d/og-image.png",
+        "description": "Real-time 6.5 MB Apache-2.0 multilingual ONNX model and browser studio for 2D lip-sync across 7 languages (en, es, fr, de, zh, ko, ja), outputting Rhubarb JSON/TSV/XML, Live2D JSON, Godot 4 Animation .tres, and Blender 5 Python keyframes.",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        },
+        "sameAs": [
+          "https://github.com/Lumonopolis/lipsync-2d",
+          "https://huggingface.co/Lumonopolis/lipsync-2d",
+          "https://huggingface.co/spaces/Lumonopolis/lipsync-2d-studio",
+          "https://pypi.org/project/lipsync-2d/",
+          "https://www.npmjs.com/package/lipsync-2d-web"
+        ]
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>
+    <noscript>
+      <main style="max-width: 760px; margin: 2rem auto; padding: 0 1rem; font-family: system-ui, sans-serif; line-height: 1.5;">
+        <h1>lipsync-2d — Real-Time Multilingual 2D Lip-Sync &amp; Visemes</h1>
+        <p>
+          <strong>lipsync-2d</strong> (Apache-2.0) is a 6.55 MB FP16 (3.57 MB INT8) causal ONNX model trained exclusively
+          on CC0-1.0 and CC-BY-4.0 speech corpora across 7 languages (English, Spanish, French, German, Mandarin, Korean,
+          Japanese). It predicts 50 Hz 9-shape Rhubarb cues, 15 Oculus visemes, and continuous mouth curves at ~1.5 ms/frame
+          in browser WASM.
+        </p>
+        <ul>
+          <li><strong>Install Python CLI:</strong> <code>pip install "lipsync-2d[onnx]"</code></li>
+          <li><strong>Install TypeScript runtime:</strong> <code>npm install lipsync-2d-web</code></li>
+          <li><strong>Export formats:</strong> Rhubarb JSON / TSV / XML, Live2D JSON, Godot 4 <code>.tres</code>, Blender 5 <code>.py</code></li>
+          <li><strong>Human-labeled TIMIT (90 distinct speakers):</strong> 0.616 Macro-F1 vs Rhubarb v1.14.0 0.432 (+18.4 pts), 25.2 ms vs 44.6 ms onset MAE, 5.7% vs 32.5% silence jaw-flap</li>
+          <li><strong>Links:</strong> <a href="https://github.com/Lumonopolis/lipsync-2d">GitHub</a> &middot; <a href="https://huggingface.co/Lumonopolis/lipsync-2d">Hugging Face Weights</a> &middot; <a href="https://huggingface.co/spaces/Lumonopolis/lipsync-2d-studio">HF Space</a> &middot; <a href="https://pypi.org/project/lipsync-2d/">PyPI</a> &middot; <a href="https://www.npmjs.com/package/lipsync-2d-web">npm</a> &middot; <a href="https://lumonopolis.github.io/lipsync-2d/llms.txt">llms.txt</a></li>
+        </ul>
+      </main>
+    </noscript>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

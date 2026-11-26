@@ -1,0 +1,22 @@
+# lipsync-2d
+
+> Real-time multilingual 2D lip-sync and viseme prediction (6.55 MB FP16 / 3.57 MB INT8 Apache-2.0 ONNX) across 7 languages with a Rhubarb-compatible CLI, TypeScript `onnxruntime-web` runtime, and Browser Studio.
+
+## Links
+
+- [Live Browser Studio (HF Space)](https://huggingface.co/spaces/Lumonopolis/lipsync-2d-studio): Zero-install client-side WASM/WebGPU character studio.
+- [Live Browser Studio (GitHub Pages)](https://lumonopolis.github.io/lipsync-2d/): Mirror of the client-side browser studio.
+- [Hugging Face Model Weights](https://huggingface.co/Lumonopolis/lipsync-2d): FP16, INT8, and FP32 offline + stateful streaming ONNX models.
+- [GitHub Repository](https://github.com/Lumonopolis/lipsync-2d): Source code, CLI, exporters, and evaluation suite.
+- [README (Raw Markdown)](https://raw.githubusercontent.com/Lumonopolis/lipsync-2d/main/README.md): Overview, Rhubarb comparison, and quickstart.
+- [Benchmarks (Raw Markdown)](https://raw.githubusercontent.com/Lumonopolis/lipsync-2d/main/BENCHMARKS.md): 90-speaker TIMIT vs Rhubarb v1.14.0, 3,600-utt 7-language test results, latency, parity, and Blender 5 / Godot 4 verification.
+- [PyPI (`lipsync-2d`)](https://pypi.org/project/lipsync-2d/): `pip install "lipsync-2d[onnx]"`
+- [npm (`lipsync-2d-web`)](https://www.npmjs.com/package/lipsync-2d-web): `npm install lipsync-2d-web`
+
+## Key Capabilities & Constraints
+
+- 7 languages out of the box (`en, es, fr, de, zh, ko, ja`), trained exclusively on commercially permissive CC0-1.0 and CC-BY-4.0 corpora (LibriSpeech, Google FLEURS, Common Voice 19, Zeroth-Korean).
+- Outputs 50 Hz predictions for 9 Rhubarb shapes (`X, A-H`), 15 Oculus visemes, and 3 continuous mouth curves (`jawOpen`, `lipRound`, `lipClose`).
+- Drop-in exporters for Rhubarb JSON/TSV/XML, Live2D JSON, Godot 4 Animation `.tres`, and Blender 5.x `.py` (verified headless in Blender 5.2 LTS and Godot 4.7).
+- Zero-shot human-annotated TIMIT (90 distinct balanced speakers): `0.616` Macro-F1 vs Rhubarb v1.14.0 `0.432` (`+18.4 pts`), `25.2 ms` vs `44.6 ms` onset MAE, `5.7%` vs `32.5%` silence jaw-flap, `0.466` vs `0.277` on `+4` semitone female voices.
+- Limitations: Japanese (`0.611`) trails Spanish/English (`0.791`/`0.756`); built for clean dialogue rather than heavy background music or overlapping speakers; streaming ONNX graph uses a `40 ms` (2-frame) causal lookahead delay.
