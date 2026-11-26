@@ -1,0 +1,13 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.venv/
+node_modules/
+dist/
+*.tsbuildinfo
+web/public/ort/
+web/public/models/*.onnx
+artifacts/
+*.ckpt
+*.pt

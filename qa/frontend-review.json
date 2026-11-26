@@ -1,0 +1,79 @@
+{
+  "project": "lipsync-2d",
+  "model": "v3_clean (100% CC0/CC-BY-4.0) lipsync_student_offline_fp16.onnx (6.55 MB) + lipsync_student_streaming_fp16.onnx (6.54 MB)",
+  "consoleErrors": [],
+  "flows": [
+    {
+      "name": "desktop-light-en-initial-inference",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "theme": "light",
+      "steps": [
+        "Open studio and wait for v3_clean ONNX WASM Ready",
+        "Verify initial EN demo audio (hello_studio.wav) runs automatic WASM inference",
+        "Verify 0 horizontal overflow and all 6 export buttons enabled"
+      ],
+      "assertions": {
+        "cues": 10,
+        "enabledExports": 6,
+        "frames": 81,
+        "inferenceMs": 48.3,
+        "overflowX": 0,
+        "status": "WASM Ready",
+        "totalExports": 6
+      },
+      "screenshot": "qa/desktop-light.png"
+    },
+    {
+      "name": "desktop-dark-ja-es-multilingual-rig-scrub",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "theme": "dark",
+      "steps": [
+        "Switch to Japanese demo (/samples/ja_demo.wav) and Indie Rig in dark mode",
+        "Scrub timeline mid-speech and verify live cues, visemes, and mouth curves update",
+        "Switch to Spanish demo (/samples/es_demo.wav) and verify multilingual inference succeeds"
+      ],
+      "assertions": {
+        "cues": 35,
+        "enabledExports": 6,
+        "frames": 196,
+        "inferenceMs": 13.6,
+        "overflowX": 0,
+        "sample": "ja_demo.wav",
+        "status": "WASM Ready",
+        "timecode": "1.34s / 3.93s",
+        "spanishCheck": {
+          "cues": 39,
+          "frames": 147,
+          "sample": "es_demo.wav"
+        }
+      },
+      "screenshot": "qa/desktop-dark.png"
+    },
+    {
+      "name": "mobile-dark-responsive-and-touch-targets",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "theme": "dark",
+      "steps": [
+        "Resize viewport to 390x844 mobile dark layout",
+        "Verify overflowX == 0 and all visible interactive controls >= 44px height"
+      ],
+      "assertions": {
+        "innerWidth": 390,
+        "minControlHeightPx": 44,
+        "overflowX": 0,
+        "scrollWidth": 390,
+        "smallControlsCount": 0
+      },
+      "screenshot": "qa/mobile-dark.png"
+    }
+  ]
+}

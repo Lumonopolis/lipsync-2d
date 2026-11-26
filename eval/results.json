@@ -1,0 +1,105 @@
+{
+  "params": 3407643,
+  "split_counts": {
+    "train": 27427,
+    "val": 3481,
+    "test": 3600
+  },
+  "student_metrics": {
+    "rhubarb9_macro_f1": 0.736384,
+    "rhubarb9_weighted_f1": 0.858795,
+    "rhubarb9_per_class_f1": {
+      "X": 0.971677,
+      "A": 0.732636,
+      "B": 0.841976,
+      "C": 0.667849,
+      "D": 0.750188,
+      "E": 0.681929,
+      "F": 0.640313,
+      "G": 0.656131,
+      "H": 0.684755
+    },
+    "bilabial_A_f1": 0.732636,
+    "labiodental_G_f1": 0.656131,
+    "silence_fp_jaw_flap_pct": 1.9307,
+    "viseme15_macro_f1": 0.718408,
+    "viseme15_weighted_f1": 0.829253,
+    "viseme15_per_class_f1": {
+      "sil": 0.971385,
+      "PP": 0.728964,
+      "FF": 0.653845,
+      "TH": 0.595509,
+      "DD": 0.687194,
+      "kk": 0.710736,
+      "CH": 0.765417,
+      "SS": 0.825527,
+      "nn": 0.726895,
+      "RR": 0.652942,
+      "aa": 0.757421,
+      "E": 0.676538,
+      "ih": 0.719288,
+      "oh": 0.664343,
+      "ou": 0.640123
+    },
+    "bilabial_PP_f1": 0.728964,
+    "labiodental_FF_f1": 0.653845,
+    "boundary_onset_mae_ms": 11.4897,
+    "high_pitch_rhubarb9_macro_f1": 0.702616,
+    "high_pitch_relative_f1_drop_pct": 4.5857,
+    "dedicated_silence_fp_pct": 0.0,
+    "per_language_r9_macro_f1": {
+      "en": 0.755546,
+      "fr": 0.701965,
+      "zh": 0.671562,
+      "de": 0.683113,
+      "ko": 0.668157,
+      "es": 0.7909,
+      "ja": 0.611264
+    }
+  },
+  "mfcc_baseline_metrics": {
+    "rhubarb9_macro_f1": 0.270693,
+    "rhubarb9_weighted_f1": 0.541998,
+    "rhubarb9_per_class_f1": {
+      "X": 0.866063,
+      "A": 0.130873,
+      "B": 0.33369,
+      "C": 0.253833,
+      "D": 0.398006,
+      "E": 0.166822,
+      "F": 0.16882,
+      "G": 0.054266,
+      "H": 0.063865
+    },
+    "bilabial_A_f1": 0.130873,
+    "labiodental_G_f1": 0.054266,
+    "silence_fp_jaw_flap_pct": 8.2536,
+    "boundary_onset_mae_ms": 21.6317
+  },
+  "onnx_benchmarks": {
+    "offline_fp32": {
+      "onnx_size_mb": 13.046,
+      "ms_per_20ms_frame": 0.164
+    },
+    "streaming_fp32": {
+      "onnx_size_mb": 13.0342,
+      "ms_per_20ms_frame": 2.3177
+    },
+    "offline_fp16": {
+      "onnx_size_mb": 6.5466,
+      "ms_per_20ms_frame": 0.1209
+    },
+    "streaming_fp16": {
+      "onnx_size_mb": 6.5352,
+      "ms_per_20ms_frame": 1.8505
+    },
+    "offline_int8": {
+      "onnx_size_mb": 3.5739,
+      "ms_per_20ms_frame": 0.0883
+    },
+    "streaming_int8": {
+      "onnx_size_mb": 3.5549,
+      "ms_per_20ms_frame": 1.0991
+    }
+  }
+}

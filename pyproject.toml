@@ -1,0 +1,59 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lipsync-2d"
+version = "0.1.0"
+description = "Real-time multilingual audio to 2D lip-sync and visemes (<15 MB ONNX/WebGPU)"
+readme = "README.md"
+license = { text = "Apache-2.0" }
+requires-python = ">=3.10"
+dependencies = [
+    "numpy>=1.24",
+    "scipy>=1.10",
+    "huggingface_hub>=0.23",
+]
+
+[project.optional-dependencies]
+torch = [
+    "torch>=2.1",
+]
+onnx = [
+    "onnx>=1.15",
+    "onnxscript>=0.1",
+    "onnxruntime>=1.17",
+]
+train = [
+    "torch>=2.1",
+    "transformers>=4.40",
+    "datasets>=2.18",
+    "huggingface_hub>=0.23",
+    "soundfile>=0.12",
+    "tqdm>=4.66",
+    "onnx>=1.15",
+    "onnxscript>=0.1",
+    "onnxruntime>=1.17",
+]
+dev = [
+    "pytest>=8.0",
+    "torch>=2.1",
+    "onnx>=1.15",
+    "onnxscript>=0.1",
+    "onnxruntime>=1.17",
+]
+
+[project.scripts]
+lipsync-2d = "lipsync_2d.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/Lumonopolis/lipsync-2d"
+Repository = "https://github.com/Lumonopolis/lipsync-2d"
+
+[tool.setuptools]
+package-dir = {"" = "python", "eval" = "eval", "train" = "train"}
+packages = ["lipsync_2d", "eval", "train"]
+
+[tool.pytest.ini_options]
+pythonpath = ["python", "."]
+testpaths = ["python/tests"]

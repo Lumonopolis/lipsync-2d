@@ -1,0 +1,148 @@
+{
+  "dataset": "kylelovesllms/timit_asr (official test split, human hand-annotated 61-phone timestamps)",
+  "model": "lipsync2d.onnx",
+  "n_unique_speakers": 90,
+  "unique_speakers_by_sex": {
+    "M": 45,
+    "F": 45
+  },
+  "normal_0st": {
+    "n_utterances": 90,
+    "lipsync_2d_raw": {
+      "rhubarb9_macro_f1": 0.615086,
+      "rhubarb9_weighted_f1": 0.665867,
+      "rhubarb9_per_class_f1": {
+        "X": 0.775987,
+        "A": 0.556929,
+        "B": 0.761866,
+        "C": 0.492208,
+        "D": 0.648155,
+        "E": 0.537936,
+        "F": 0.608607,
+        "G": 0.56465,
+        "H": 0.589438
+      },
+      "bilabial_A_f1": 0.556929,
+      "labiodental_G_f1": 0.56465,
+      "silence_fp_jaw_flap_pct": 5.3563,
+      "boundary_onset_mae_ms": 19.0741
+    },
+    "lipsync_2d_viterbi": {
+      "rhubarb9_macro_f1": 0.615695,
+      "rhubarb9_weighted_f1": 0.662806,
+      "rhubarb9_per_class_f1": {
+        "X": 0.777238,
+        "A": 0.554611,
+        "B": 0.754441,
+        "C": 0.456655,
+        "D": 0.656118,
+        "E": 0.546485,
+        "F": 0.61233,
+        "G": 0.56799,
+        "H": 0.615385
+      },
+      "bilabial_A_f1": 0.554611,
+      "labiodental_G_f1": 0.56799,
+      "silence_fp_jaw_flap_pct": 5.7002,
+      "boundary_onset_mae_ms": 25.2192
+    },
+    "lipsync_2d_by_sex_macro_f1": {
+      "M": 0.618793,
+      "F": 0.611392
+    },
+    "rhubarb_v1_14_phonetic": {
+      "rhubarb9_macro_f1": 0.43212,
+      "rhubarb9_weighted_f1": 0.492776,
+      "rhubarb9_per_class_f1": {
+        "X": 0.792954,
+        "A": 0.322751,
+        "B": 0.577949,
+        "C": 0.270665,
+        "D": 0.254312,
+        "E": 0.46433,
+        "F": 0.340321,
+        "G": 0.582677,
+        "H": 0.283117
+      },
+      "bilabial_A_f1": 0.322751,
+      "labiodental_G_f1": 0.582677,
+      "silence_fp_jaw_flap_pct": 32.5307,
+      "boundary_onset_mae_ms": 44.5473
+    },
+    "rhubarb_by_sex_macro_f1": {
+      "M": 0.437864,
+      "F": 0.426546
+    }
+  },
+  "high_pitch_plus4st": {
+    "n_utterances": 90,
+    "lipsync_2d_raw": {
+      "rhubarb9_macro_f1": 0.495992,
+      "rhubarb9_weighted_f1": 0.564905,
+      "rhubarb9_per_class_f1": {
+        "X": 0.646823,
+        "A": 0.360816,
+        "B": 0.685149,
+        "C": 0.385185,
+        "D": 0.607706,
+        "E": 0.438165,
+        "F": 0.478481,
+        "G": 0.396442,
+        "H": 0.465162
+      },
+      "bilabial_A_f1": 0.360816,
+      "labiodental_G_f1": 0.396442,
+      "silence_fp_jaw_flap_pct": 4.9631,
+      "boundary_onset_mae_ms": 34.7972
+    },
+    "lipsync_2d_viterbi": {
+      "rhubarb9_macro_f1": 0.490334,
+      "rhubarb9_weighted_f1": 0.56248,
+      "rhubarb9_per_class_f1": {
+        "X": 0.652839,
+        "A": 0.341098,
+        "B": 0.686028,
+        "C": 0.355204,
+        "D": 0.618813,
+        "E": 0.440926,
+        "F": 0.454308,
+        "G": 0.40052,
+        "H": 0.463265
+      },
+      "bilabial_A_f1": 0.341098,
+      "labiodental_G_f1": 0.40052,
+      "silence_fp_jaw_flap_pct": 5.6511,
+      "boundary_onset_mae_ms": 42.1958
+    },
+    "lipsync_2d_by_sex_macro_f1": {
+      "M": 0.524765,
+      "F": 0.465931
+    },
+    "rhubarb_v1_14_phonetic": {
+      "rhubarb9_macro_f1": 0.343971,
+      "rhubarb9_weighted_f1": 0.429343,
+      "rhubarb9_per_class_f1": {
+        "X": 0.82586,
+        "A": 0.205501,
+        "B": 0.54234,
+        "C": 0.243218,
+        "D": 0.141127,
+        "E": 0.289445,
+        "F": 0.265487,
+        "G": 0.365264,
+        "H": 0.2175
+      },
+      "bilabial_A_f1": 0.205501,
+      "labiodental_G_f1": 0.365264,
+      "silence_fp_jaw_flap_pct": 26.2408,
+      "boundary_onset_mae_ms": 47.6936
+    },
+    "rhubarb_by_sex_macro_f1": {
+      "M": 0.416869,
+      "F": 0.27739
+    }
+  },
+  "lipsync_2d_raw_plus4st_rel_drop_pct": 19.36,
+  "lipsync_2d_viterbi_plus4st_rel_drop_pct": 20.36,
+  "rhubarb_v1_14_phonetic_plus4st_rel_drop_pct": 20.4
+}
